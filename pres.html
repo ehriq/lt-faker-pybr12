@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Faker - @ehriq</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Sans+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      body {
+        font-family: dejavu sans;
+      }
+      p, li {
+        font-size: 0.8em;
+      }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      #slide-exemplo img {
+        width: 100%;
+      }
+      img {
+        width: 75%;
+      }
+      .remark-code, .remark-inline-code {
+        font-family: 'Ubuntu Mono';
+        background-color: black;
+        padding: 6px;
+        margin: 3px;
+        color: white;
+        display: block;}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle
+layout: false
+
+# biblioteca faker
+### Erick Müller
+[@ehriq](https://twitter.com/ehriq)<br>
+http://www.tekniq.com.br
+---
+# quem já ouviu as seguintes frases:
+
+1. eu não tenho dados suficientes para testar isso.
+2. isso vai sem teste mesmo, não tem dados suficientes.
+3. mas não temos 100.000 pessoas registradas, como vou saber a velocidade disso com carga alta?
+---
+# quem já **falou** as seguintes frases:
+
+1. eu não tenho dados suficientes para testar isso.
+2. isso vai sem teste mesmo, não tem dados suficientes.
+3. mas não temos 100.000 pessoas registradas, como vou saber a velocidade disso com carga alta?
+---
+# quem já **falou** as seguintes frases:
+
+1. eu não tenho dados suficientes para testar isso.
+2. isso vai sem teste mesmo, não tem dados suficientes.
+3. mas não temos 100.000 pessoas registradas, como vou saber a velocidade disso com carga alta?
+
+# pare de sofrer.
+# seus problemas acabaram.
+---
+### apresentamos a maravilhosa biblioteca
+
+# faker
+
+ela gera os dados de teste para você.
+
+e **também** em pt-BR!
+
+<br />
+
+
+```bash:
+(env) $ pip install Faker
+```
+
+
+```python:
+from faker import Faker
+fake = Faker("pt_BR")
+```
+
+---
+### o que essa lib entrega, exatamente?
+
+diversas funções que geram dados aleatórios, de acordo com o que for pedido!
+
+- profile
+```python:
+faker.simple_profile()
+```
+- nome
+```python:
+faker.name()
+```
+- username
+```python:
+faker.username()
+```
+- endereço de e-mail
+```python:
+faker.safe_email()
+```
+- número inteiro em um range (bom para idades)
+```python:
+faker.random_int(min=18, max=80)
+```
+---
+### o que essa lib entrega, exatamente?
+
+diversas funções que geram dados aleatórios, de acordo com o que for pedido!
+
+- cpf
+```python:
+faker.cpf()
+```
+- cep
+```python:
+faker.postcode()
+```
+- dicionarios python
+```python:
+faker.pydict()
+```
+- frase para livro motivacional (ou startup)
+```python:
+fake.catch_phrase()
+```
+- etc.
+---
+### o que essa lib entrega, exatamente?
+
+diversas funções que geram dados aleatórios, de acordo com o que for pedido!
+
+
+### para ver todos os providers:
+
+https://faker.readthedocs.io/en/latest/providers.html
+
+ou
+
+```python:
+dir(fake)
+```
+---
+name: exemplo
+
+# hora do exemplo:
+
+![Imagem](./codigo_001.png)
+
+---
+
+.center[
+#Obrigado!
+![Imagem](./chuck.gif)
+]
+    </textarea>
+    <script src="remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
